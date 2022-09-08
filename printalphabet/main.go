@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	for i := 97; i < 122; {
+	for i := 97; i <= 122; {
 
 		z01.PrintRune(rune(i))
 		i++
