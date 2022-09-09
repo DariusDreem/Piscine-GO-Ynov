@@ -7,17 +7,16 @@ func PrintComb2() {
 		for b := 48; b <= 57; b++ {
 			for c := 48; c <= 57; c++ {
 				for d := 48; d <= 57; d++ {
-					z01.PrintRune(rune(a))
-					z01.PrintRune(rune(b))
-					z01.PrintRune(' ')
-					z01.PrintRune(rune(c))
-					z01.PrintRune(rune(d))
-					if a == 57 && b == 56 && c == 57 && d == 57 {
-						z01.PrintRune('\n')
-						return
-					} else {
-						z01.PrintRune(',')
+					if a <= c && b < d {
+						z01.PrintRune(rune(a))
+						z01.PrintRune(rune(b))
 						z01.PrintRune(' ')
+						z01.PrintRune(rune(c))
+						z01.PrintRune(rune(d))
+						if !(a == 57 && b == 56 && c == 57 && d == 57) {
+							z01.PrintRune(',')
+							z01.PrintRune(' ')
+						}
 					}
 				}
 			}
