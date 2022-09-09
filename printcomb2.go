@@ -7,7 +7,7 @@ func PrintComb2() {
 		for b := 48; b <= 57; b++ {
 			for c := 48; c <= 57; c++ {
 				for d := 48; d <= 57; d++ {
-					if a <= c && b < d {
+					if a*10+b < c*10+d {
 						z01.PrintRune(rune(a))
 						z01.PrintRune(rune(b))
 						z01.PrintRune(' ')
