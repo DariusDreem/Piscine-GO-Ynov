@@ -5,13 +5,6 @@ import (
 	"piscine"
 )
 
-package main
-
-import (
-"fmt"
-"piscine"
-)
-
 func main() {
 	a := 0
 	b := 1
