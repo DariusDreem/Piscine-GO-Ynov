@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	n := 50
+	n := 0
 	piscine.PointOne(&n)
 	fmt.Println(n)
 }
