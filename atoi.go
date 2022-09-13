@@ -26,9 +26,13 @@ func Atoi(s string) int {
 			a = a + int(element-48)*i
 			i = i * 10
 		}
+
 	}
 	if isnegative {
 		a = -a
+	}
+	if isnegative == true && ispositive == true {
+		return 0
 	}
 	return a
 }
