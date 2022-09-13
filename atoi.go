@@ -22,7 +22,6 @@ func Atoi(s string) int {
 				moins++
 				//z01.PrintRune(45)
 				isnegative = true
-
 			} else {
 				return 0
 			}
