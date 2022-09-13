@@ -20,7 +20,6 @@ func Atoi(s string) int {
 				return 0
 			} else if int(element) == 45 && moins < 1 {
 				moins++
-				//z01.PrintRune(45)
 				isnegative = true
 			} else {
 				return 0
