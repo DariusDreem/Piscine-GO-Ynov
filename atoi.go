@@ -5,12 +5,17 @@ func Atoi(s string) int {
 	for i := len([]rune(s)) - 1; i >= 0; i-- {
 		rev = rev + string(s[i])
 	}
+	pabo := 0
 	a := 0
 	i := 1
 	ispositive := false
 	isnegative := false
 	for _, element := range rev {
+		pabo++
 		if int(element) < 48 || int(element) > 57 {
+			if pabo == 1 {
+				return 0
+			}
 			if int(element) == 43 && ispositive == false {
 				ispositive = true
 			} else if ispositive == true && isnegative == true {
