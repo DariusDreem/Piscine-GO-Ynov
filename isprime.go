@@ -11,6 +11,8 @@ func IsPrime(nb int) bool {
 		return false
 	} else if nb == 1 {
 		return false
+	} else if nb < 0 {
+		return false
 	}
 	return true
 }
