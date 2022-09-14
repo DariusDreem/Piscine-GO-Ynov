@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-	s := []int{4, 12, 8, 1, 7}
-	piscine.SortIntegerTable(s)
-	fmt.Println(s)
+	arg := 4
+	fmt.Println(piscine.IterativeFactorial(arg))
 }
