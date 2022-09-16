@@ -1,5 +1,4 @@
 package piscine
 
 func EightQueens() {
-
 }
