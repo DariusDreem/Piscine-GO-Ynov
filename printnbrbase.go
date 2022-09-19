@@ -44,6 +44,9 @@ func PrintNbrBase(nbr int, base string) {
 	}
 	for nbr = nbr; nbr != 0; {
 		resultmod := nbr % len(base)
+		if resultmod < 0 {
+			resultmod = -resultmod
+		}
 		resultBase = string(base[resultmod]) + resultBase
 		nbr /= len(base)
 	}
