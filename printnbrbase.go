@@ -20,12 +20,17 @@ func PrintNbrBase(nbr int, base string) {
 	}
 	for _, element := range base {
 		loop = 0
+		if element == 43 || element == 45 {
+			z01.PrintRune('N')
+			z01.PrintRune('V')
+			return
+		}
 		if len(baseList) == 0 {
 			baseList = append(baseList, string(element))
 			continue
 		}
 		for _, baseLetter := range baseList {
-			if string(element) == baseLetter || element == 43 || element == 45 {
+			if string(element) == baseLetter {
 				z01.PrintRune('N')
 				z01.PrintRune('V')
 				return
