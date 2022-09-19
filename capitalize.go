@@ -20,12 +20,12 @@ func Capitalize(s string) string {
 				pabo++
 				world += string(letter)
 			}
-		} else if letter == 32 || letter == 43 {
-			pabo = 0
-			world += string(letter)
 		} else if letter >= 48 && letter <= 57 {
 			world += string(letter)
 			pabo++
+		} else {
+			pabo = 0
+			world += string(letter)
 		}
 	}
 	return world
