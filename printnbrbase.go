@@ -25,7 +25,7 @@ func PrintNbrBase(nbr int, base string) {
 			continue
 		}
 		for _, baseLetter := range baseList {
-			if string(element) == baseLetter {
+			if string(element) == baseLetter || element == 43 || element == 45 {
 				z01.PrintRune('N')
 				z01.PrintRune('V')
 				return
