@@ -23,9 +23,9 @@ func PrintCombN(n int) {
 			}
 			z01.PrintRune(' ')
 		}
+		z01.PrintRune('\n')
 		return
 	}
-	z01.PrintRune('\n')
 
 	for {
 		if resultList[n-1] != 9 {
