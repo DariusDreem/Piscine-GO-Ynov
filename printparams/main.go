@@ -8,7 +8,7 @@ import (
 
 func main() {
 	arg := os.Args
-	for i := 0; i != len(arg); i++ {
+	for i := 1; i != len(arg); i++ {
 		remove_string(arg[i])
 	}
 }
