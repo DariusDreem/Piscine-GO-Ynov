@@ -12,17 +12,15 @@ func main() {
 }
 
 func remove_string(str string) {
-	resultList := []int{}
-	for i := len(str) - 1; i != -1; i-- {
-		el := int(str[i])
-		if el == 92 || el == 47 || el == 58 || el == 42 || el == 63 || el == 34 || el == 60 || el == 62 || el == 124 {
-			break
-		} else {
-			resultList = append(resultList, el)
+	result := 0
+	for i, el := range str {
+		if el == 92 {
+			result = i
 		}
 	}
-	for i := len(resultList) - 1; i != -1; i-- {
-		z01.PrintRune(rune(resultList[i]))
+	str = str[result+1:]
+	for i := 0; i != len(str); i++ {
+		z01.PrintRune(rune(str[i]))
 	}
 	return
 }
