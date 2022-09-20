@@ -20,8 +20,9 @@ func PrintCombN(n int) {
 			z01.PrintRune(rune(48 + i))
 			if i != 9 {
 				z01.PrintRune(',')
+				z01.PrintRune(' ')
 			}
-			z01.PrintRune(' ')
+
 		}
 		z01.PrintRune('\n')
 		return
