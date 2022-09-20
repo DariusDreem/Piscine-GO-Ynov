@@ -14,14 +14,16 @@ func main() {
 	}
 	resultList = sortParams(resultList)
 	for _, el := range resultList {
-		z01.PrintRune(rune(el[0]))
+		for _, element := range el {
+			z01.PrintRune(rune(element))
+		}
 		z01.PrintRune('\n')
 	}
 }
 
 func sortParams(array []string) []string {
 	for i := 0; i < len(array)-1; i++ {
-		if array[i] > array[i+1] {
+		if array[i][0] > array[i+1][0] {
 			array[i], array[i+1] = array[i+1], array[i]
 			i = -1
 		}
