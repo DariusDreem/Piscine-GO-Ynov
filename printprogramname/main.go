@@ -14,13 +14,14 @@ func main() {
 func remove_string(str string) {
 	result := 0
 	for i, el := range str {
-		if el == 47 {
+		if el == 47 || el == 92 {
 			result = i
 		}
 	}
 	str = str[result+1:]
-	for i := 0; i != len(str); i++ {
-		z01.PrintRune(rune(str[i]))
+	for _, el := range str {
+		z01.PrintRune(el)
 	}
+	z01.PrintRune('\n')
 	return
 }
