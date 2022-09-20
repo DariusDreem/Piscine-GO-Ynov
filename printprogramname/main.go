@@ -14,7 +14,7 @@ func main() {
 func remove_string(str string) {
 	result := 0
 	for i, el := range str {
-		if el == 92 {
+		if el == 47 {
 			result = i
 		}
 	}
