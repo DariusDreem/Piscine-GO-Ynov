@@ -91,6 +91,7 @@ func PrintCombN(n int) {
 			z01.PrintRune(rune(el + 48))
 		}
 		if resultList[n-n] == 10-n {
+			z01.PrintRune('\n')
 			break
 		} else {
 			z01.PrintRune(',')
