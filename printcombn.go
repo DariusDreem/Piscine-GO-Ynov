@@ -6,15 +6,12 @@ import (
 
 func PrintCombN(n int) {
 	resultList := []int{}
-
 	if n > 10 {
 		return
 	}
-
 	for i := 0; i != n; i++ {
 		resultList = append(resultList, i)
 	}
-
 	if n == 1 {
 		for i := 0; i < 10; i++ {
 			z01.PrintRune(rune(48 + i))
@@ -22,12 +19,19 @@ func PrintCombN(n int) {
 				z01.PrintRune(',')
 				z01.PrintRune(' ')
 			}
-
 		}
 		z01.PrintRune('\n')
 		return
 	}
-
+	if resultList[n-n] == 0 {
+		resultList[n-1] = int(resultList[n-1])
+		for _, el := range resultList {
+			z01.PrintRune(rune(el + 48))
+		}
+		z01.PrintRune(',')
+		z01.PrintRune(' ')
+	}
+}
 	for {
 		if resultList[n-1] != 9 {
 			resultList[n-1] = int(resultList[n-1]) + 1
@@ -84,7 +88,6 @@ func PrintCombN(n int) {
 			resultList[n-2] = resultList[n-3] + 1
 			resultList[n-1] = resultList[n-2] + 1
 		}
-
 		for _, el := range resultList {
 			z01.PrintRune(rune(el + 48))
 		}
