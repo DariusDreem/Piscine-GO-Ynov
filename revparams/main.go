@@ -12,6 +12,7 @@ func main() {
 		remove_string(arg[i])
 	}
 }
+
 func remove_string(str string) {
 	for _, el := range str {
 		z01.PrintRune(el)
