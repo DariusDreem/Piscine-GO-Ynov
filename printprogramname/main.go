@@ -7,21 +7,56 @@ import (
 )
 
 func main() {
+	resultList := []int{}
 	arg := os.Args
-	remove_string(arg[0])
-}
-
-func remove_string(str string) {
-	result := 0
-	for i, el := range str {
-		if el == 47 || el == 92 {
-			result = i
+	if len(arg) == 1 {
+		return
+	}
+	for i := 1; i < len(arg); i++ {
+		a := BasicAtoi(arg[i])
+		if a >= 1 && a <= 25 {
+			resultList = append(resultList, a)
+		} else {
+			resultList = append(resultList, 32)
 		}
 	}
-	str = str[result+1:]
-	for _, el := range str {
-		z01.PrintRune(el)
+	if arg[1] == "--upper" {
+		resultList = resultList[1:]
+		nbrconvertalphaUpper(resultList)
+	} else {
+		nbrconvertalphaLower(resultList)
 	}
 	z01.PrintRune('\n')
-	return
+}
+
+func nbrconvertalphaUpper(array []int) {
+	for _, el := range array {
+		if el != 32 {
+			el += 64
+		}
+		z01.PrintRune(rune(el))
+	}
+}
+
+func nbrconvertalphaLower(array []int) {
+	for _, el := range array {
+		if el != 32 {
+			el += 96
+		}
+		z01.PrintRune(rune(el))
+	}
+}
+
+func BasicAtoi(s string) int {
+	rev := ""
+	for i := len([]rune(s)) - 1; i >= 0; i-- {
+		rev = rev + string(s[i])
+	}
+	a := 0
+	i := 1
+	for _, element := range rev {
+		a = a + int(element-48)*i
+		i = i * 10
+	}
+	return a
 }
