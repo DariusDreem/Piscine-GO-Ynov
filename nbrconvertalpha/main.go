@@ -14,7 +14,7 @@ func main() {
 	}
 	for i := 1; i < len(arg); i++ {
 		a := BasicAtoi(arg[i])
-		if a >= 1 && a <= 25 {
+		if a >= 1 && a <= 26 {
 			resultList = append(resultList, a)
 		} else {
 			resultList = append(resultList, 32)
