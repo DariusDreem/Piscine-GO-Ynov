@@ -24,6 +24,10 @@ func SplitWhiteSpaces(s string) []string {
 			yee = false
 		}
 	}
-	array = append(array, str)
+	if str == "" {
+		return array
+	} else {
+		array = append(array, str)
+	}
 	return array
 }
