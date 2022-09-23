@@ -10,6 +10,7 @@ func SplitWhiteSpaces(s string) []string {
 		i++
 		if word == 32 {
 			if str == "" {
+				break
 			} else {
 				array = append(array, str)
 				str = ""
