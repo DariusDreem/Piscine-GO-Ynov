@@ -9,7 +9,9 @@ func SplitWhiteSpaces(s string) []string {
 	for _, word := range s {
 		word = word
 		i++
-		if word == 32 {
+		if len(str) <= 1 {
+			continue
+		} else if word == 32 {
 			array = append(array, str)
 			str = ""
 			yee = true
