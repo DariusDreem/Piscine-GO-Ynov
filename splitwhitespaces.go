@@ -4,12 +4,16 @@ func SplitWhiteSpaces(s string) []string {
 	array := []string{}
 	str := ""
 	i := 0
+	yee := false
 	for _, word := range s {
 		word = word
 		i++
 		if word == 32 {
 			array = append(array, str)
 			str = ""
+			yee = true
+		} else if word == 32 && yee {
+			continue
 		} else {
 			str += string(word)
 		}
