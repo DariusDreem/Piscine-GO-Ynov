@@ -13,6 +13,7 @@ func SplitWhiteSpaces(s string) []string {
 			str = ""
 			yee = true
 		} else if word == 32 && yee {
+			yee = false
 			continue
 		} else {
 			str += string(word)
