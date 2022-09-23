@@ -1,9 +1,10 @@
 package piscine
 
 func SplitWhiteSpaces(s string) []string {
-	array := []string{}
 	str := ""
 	i := 0
+	array := []string{}
+
 	yee := false
 	for _, word := range s {
 		word = word
