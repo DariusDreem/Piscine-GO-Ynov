@@ -19,15 +19,14 @@ func SplitWhiteSpaces(s string) []string {
 		} else if word == 32 && yee {
 			yee = false
 			continue
+		} else if str == "" {
+			str += string(word)
+			yee = false
 		} else {
 			str += string(word)
 			yee = false
 		}
 	}
-	if str == "" {
-		return array
-	} else {
-		array = append(array, str)
-	}
+	array = append(array, str)
 	return array
 }
