@@ -1,9 +1,5 @@
 package piscine
 
-import (
-	"fmt"
-)
-
 func SplitWhiteSpaces(s string) []string {
 	array := []string{}
 	str := ""
@@ -12,7 +8,6 @@ func SplitWhiteSpaces(s string) []string {
 		word = word
 		i++
 		if word == 32 {
-			fmt.Println("nique")
 			array = append(array, str)
 			str = ""
 		} else {
