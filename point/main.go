@@ -17,15 +17,13 @@ func setPoint(ptr *point) {
 }
 
 func main() {
-	points := point{}
-
-	setPoint(&points)
-
-	piscine.PrintStr("x =")
+	points := &point{}
+	setPoint(points)
+	piscine.PrintStr("x = ")
 	z01.PrintRune(rune(points.x/10 + 48))
 	z01.PrintRune(rune(points.x%10 + 48))
 	piscine.PrintStr(", ")
-	piscine.PrintStr("y =")
+	piscine.PrintStr("y = ")
 	z01.PrintRune(rune(points.y/10 + 48))
 	z01.PrintRune(rune(points.y%10 + 48))
 }
