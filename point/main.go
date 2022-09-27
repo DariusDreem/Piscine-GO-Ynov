@@ -5,8 +5,13 @@ import (
 )
 
 type point struct {
-	y int
-	x int
+	x rune
+	y rune
+}
+
+func setPoint(ptr *point) {
+	ptr.x = 42
+	ptr.y = 21
 }
 
 func PrintStr(s string) {
@@ -15,19 +20,16 @@ func PrintStr(s string) {
 	}
 }
 
-func setPoint(ptr *point) {
-	ptr.x = 42
-	ptr.y = 21
-}
-
 func main() {
 	points := &point{}
 	setPoint(points)
 	PrintStr("x = ")
-	z01.PrintRune(rune(points.x/10 + 48))
-	z01.PrintRune(rune(points.x%10 + 48))
-	PrintStr(", ")
+	z01.PrintRune(points.x/10 + 48)
+	z01.PrintRune(points.x%10 + 48)
+	PrintStr(",")
+	PrintStr(" ")
 	PrintStr("y = ")
-	z01.PrintRune(rune(points.y/10 + 48))
-	z01.PrintRune(rune(points.y%10 + 48))
+	z01.PrintRune(points.y/10 + 48)
+	z01.PrintRune(points.y%10 + 48)
+	z01.PrintRune('\n')
 }
