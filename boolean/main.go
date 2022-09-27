@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/01-edu/z01"
 	"os"
+
+	"github.com/01-edu/z01"
 )
 
 func printStr(s string) {
@@ -11,7 +12,6 @@ func printStr(s string) {
 	}
 	z01.PrintRune('\n')
 }
-
 func even(nbr2 int) bool {
 	if nbr2%2 == 0 {
 		return true
