@@ -13,7 +13,5 @@ func main() {
 	} else if len(os.Args[1:]) == 0 {
 		fmt.Println("File name missing")
 	}
-
 	fmt.Printf("File contents: %s", content)
-
 }
