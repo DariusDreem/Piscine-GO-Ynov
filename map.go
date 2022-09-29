@@ -7,11 +7,8 @@ func Map(f func(int) bool, a []int) []bool {
 		i++
 
 		if IsPrime(nbr) == true {
-			bol = true
-		} else if IsPrime(nbr) == false {
 			bol = false
-		}
-		if nbr < 0 {
+		} else if IsPrime(nbr) == false {
 			bol = true
 		}
 		Yee = append(Yee, bol)
