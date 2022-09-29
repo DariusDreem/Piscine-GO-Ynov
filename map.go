@@ -1,17 +1,11 @@
 package piscine
 
 func Map(f func(int) bool, a []int) []bool {
-	var Yee []bool
-	bol := false
-	for i, nbr := range a {
+	prime := make([]bool, len(a))
+	i := 0
+	for _, nbr := range a {
+		prime[i] = f(nbr)
 		i++
-
-		if IsPrime(nbr) == true {
-			bol = false
-		} else if IsPrime(nbr) == false {
-			bol = true
-		}
-		Yee = append(Yee, bol)
 	}
-	return Yee
+	return prime
 }
