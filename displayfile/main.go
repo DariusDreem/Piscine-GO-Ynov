@@ -1,17 +1,18 @@
-package main
-
-import (
-	"fmt"
-	"io/ioutil"
-	"os"
-)
-
 func main() {
-	content, err := ioutil.ReadFile(os.Args[1])
-	if len(os.Args[1:]) >= 2 {
-		fmt.Println("Too many arguments")
-	} else if len(os.Args[1:]) == 0 {
-		fmt.Println("File name missing")
-	}
-	fmt.Printf("File contents: %s", content)
+arg := os.Args
+file, err := os.ReadFile("quest8.txt")
+
+if len(arg) < 2 {
+fmt.Println("File name missing")
+return
+}
+if len(arg) > 2 {
+fmt.Println("Too many arguments")
+return
+}
+if err != nil {
+fmt.Println(err.Error())
+return
+}
+fmt.Print(string(file))
 }
